@@ -1,0 +1,34 @@
+ name:                morris
+ version:             0.0.1.0
+ description:         Interpreter for the morris programming language
+ license:             GPL
+ license-file:        LICENSE
+ author:              Will Harding
+ maintainer:          harding.will@gmail.com
+ build-type:          Simple
+ cabal-version:       >=1.10
+
+ executable morris
+   main-is:            Main.hs
+   hs-source-dirs:     src
+   default-language:   Haskell2010
+   ghc-options:    -Wall
+   default-extensions: OverloadedStrings
+   build-depends:      base >=4.5 && <4.8
+                     , text
+                     , attoparsec ==0.12.1.6
+                     , parsec ==3.1.9
+
+ Test-Suite spec
+   type:           exitcode-stdio-1.0
+   ghc-options:    -Wall
+   hs-source-dirs: test, src
+   main-is:        Spec.hs
+   default-extensions: OverloadedStrings
+   build-depends:  base >=4.5 && <4.8
+                 , text
+                 , QuickCheck ==2.7.6 
+                 , hspec ==2.1.7
+                 , hspec-attoparsec ==0.1.0.2
+                 , attoparsec ==0.12.1.6
+
